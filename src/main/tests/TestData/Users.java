@@ -1,0 +1,2 @@
+String GCM = EFS_CM_KEY_CLIENTS
+String CM = EFS_CM_KSB

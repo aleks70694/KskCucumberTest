@@ -1,0 +1,36 @@
+package main.tests.KSK;
+
+public class KskSteps {
+
+    // constructor
+
+    @Given("авторизован с ролью {String}")
+    public void authorized(String role) {
+        //происходит авторизация с переданной ролью
+    }
+
+    @Given("xml с именем {String} распарсена и готова для подстановки ответа")
+    public void parseXML(String name) {
+        //происходит парсинг XML и подготовка для скармливания его нашему сервису
+    }
+
+    @Given("мой запрос {String} содержит параметр {String} и значение {String}")
+    public void parametrizedRequest(String employeeList, String parameter, String value) {
+        //в запрос подставляются указанные параметры запроса со значениями
+    }
+
+    @When("я выполняю запрос сервиса {String}")
+    public void requestService(String name) {
+        //выполняется запрос переданного сервиса url+endpoint+parameters+bodyRequest
+    }
+
+    @Then("я бы ожидал получить {int} строки организаций") //может надо передавать имя сервиса?
+    public void checkNumRow(int num) {
+        //происходит проверка списка строк
+    }
+
+    @Then("я бы ожидал получить ошибку {String}")
+    public void checkError(Exception errorName) {
+        //происходит проверка на возврат корректной ошибки
+    }
+}

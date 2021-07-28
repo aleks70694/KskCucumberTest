@@ -1,0 +1,22 @@
+package main.tests.Rules;
+
+public class RulesSteps {
+
+    private String userAlias;
+    private ApiClient apiClient;
+
+    // constructor
+
+    @Given("a new user {word}")
+    public void aNewUser(String user) {
+        this.userAlias = user;
+    }
+
+    // ... (other methods)
+
+    @Then("her/his stats include {int} {correct} attempt(s)")
+    public void statsIncludeAttempts(int attemptNumber, boolean correct) {
+        var stats = this.apiClient.getStats(this.userAlias);
+        // verify that the stats contain the expected number of (in)correct attempts
+    }
+}
